@@ -354,7 +354,7 @@ export async function buildProject(
         }
       } else {
         buildCommand = app.runner.runnerCommand
-        buildArgs = [...app.runner.runnerArgs, 'build']
+        buildArgs = [...app.runner.runnerArgs]
       }
 
       return execCommand(buildCommand, [...buildArgs, ...tauriArgs], {
